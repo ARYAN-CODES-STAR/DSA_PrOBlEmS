@@ -32,3 +32,33 @@ public:
        
     }
 };
+
+IS SUBSEQUENCE
+
+Appr 1: brute force and compare each of s[i] to each ele. of t[i]and check,
+Appr 2:
+
+class Solution {
+public:
+    bool isSubsequence(string s, string t) {
+        // int s[100];
+        // int t[10000];
+
+        // if( s[100] ==0 && t[10000] ==0 ){
+        //     return false;
+        // }
+        for( int i=0 ; i <= 100 ; i++ ){
+            int m = s[i];
+
+            for( int j=0 ; j <= 1000 ; j++ ){
+                if( s[i] != t[j] ){
+                    return false;
+                }
+
+            }
+
+        }
+        return true;
+
+    }
+};
