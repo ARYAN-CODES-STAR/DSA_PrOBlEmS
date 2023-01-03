@@ -29,3 +29,24 @@ public:
 };
 
 here we keep update prev and next so get each ele of LL.
+
+
+Middle of the Linked List::
+
+Appr slow and fast moving, can also done by using array and increment for fast and slow is 2*i and i.
+
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        
+            ListNode* p=head;
+        ListNode* q=head;
+        while(p!=0 && p->next!=0){                  // TC: O(N)
+            p=p->next->next;
+            q=q->next;
+        }
+        return q;
+
+
+    }
+};
