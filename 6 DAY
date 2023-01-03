@@ -1,0 +1,31 @@
+REVERSE THE LINKED LIST
+
+Appr-
+making 3 pointers::
+
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* next = NULL ;
+        ListNode* prev = NULL ;
+        ListNode* curr = head ;
+
+        while( curr != NULL ){
+
+        
+        next = curr -> next ;
+        curr -> next = prev ;
+
+        prev = curr ;
+        curr = next ;
+
+        }
+        head = prev ;
+
+
+        return prev;
+    }
+    // return head ;
+};
+
+here we keep update prev and next so get each ele of LL.
